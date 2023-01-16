@@ -136,8 +136,9 @@ nav {
     padding: 0 ;
     overflow: hidden;
     position: fixed;
-    top: 0;
+    top: 10;
     width: 100%;
+    z-index: 100;
 }
 
 nav h1 {
@@ -152,7 +153,6 @@ nav i {
     margin: .50em auto;
     font-size: 2em;
     cursor: pointer;
-
 }
 
 /* Used for javascript to hide menu */
