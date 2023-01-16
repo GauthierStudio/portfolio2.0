@@ -24,12 +24,12 @@ function mobileMenu() {
 }
 
 
-var viewpoint = document.getElementsByClassName('viewpoint')[0];
+let viewpoint = document.getElementsByClassName('viewpoint')[0];
 
 // trigger this function every time the user scrolls
 window.onscroll = function (event) {
     var scroll = window.pageYOffset;
-    if (scroll >= 700) {
+    if (scroll >= 680) {
         // blue
         viewpoint.style.backgroundColor = 'var(--text-red)';
     }
