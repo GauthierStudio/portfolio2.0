@@ -133,31 +133,31 @@ Mobile
 /* Selects each child of nav to add wrapper */
 
 nav {
-    max-width: var(--inner-wrapper);
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    padding: 1em 0 ;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav h1 {
+    float: left;
+    margin: 0 auto;
     color: var(--accent);
     font-size: calc(var(--h2-font-size) - 50%);
 }
 
 nav i {
+    float: right;
     margin: 0 auto;
-    padding: 0.5em 0;
     font-size: 2em;
     cursor: pointer;
 
 }
 
-
 /* Used for javascript to hide menu */
 #menu {
-    /* display: block; */
+    /* display: inline-block; */
     display: none;
 }
 
@@ -165,20 +165,32 @@ nav i:hover {
     color: var(--accent);
 }
 
-.menu-items ul {
-    display: flex;
+.menu-items {
+    /* background-color: black; */
+    margin-top: 1em;
     width: 100%;
+}
+
+.menu-items ul {
+    margin: auto;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .menu-items ul li {
-    margin: 0 1em;
+    display: inline-block;
 }
-
+.menu-items ul li i {
+    display: inline-block;
+}
 .menu-items li a {
     font-size: var(--h5-font-size);
 }
+
+
+
+
 
 .menu-items ul li a:hover {
     text-decoration: none;
@@ -265,13 +277,6 @@ nav i:hover {
 
 
 
-
-
-
-
-
-
-
 /***********************
 
 Animations
@@ -286,164 +291,37 @@ Animations
  * ---------------------------------------------- */
 
 .bounce-in-top {
-    animation: bounce-in-top 1s ease-in-out both;
+    animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .load-blink {
-    animation: bounce-in-top 1s ease-in-out both, load-blink 1s 3.5s both;
-}
-
-@keyframes load-blink {
-
-    0%,
-    100% {
-        transform: translateX(0%);
-        transform-origin: 50% 50%;
-    }
-
-    15% {
-        transform: translateX(-30px) rotate(6deg);
-    }
-
-    30% {
-        transform: translateX(15px) rotate(-6deg);
-    }
-
-    45% {
-        transform: translateX(-15px) rotate(3.6deg);
-    }
-
-    60% {
-        transform: translateX(9px) rotate(-2.4deg);
-    }
-
-    75% {
-        transform: translateX(-6px) rotate(1.2deg);
-    }
+    animation: appear 1s .57s ease-in both;
 }
 
 
-/**
- * ----------------------------------------
- * animation bounce-in-top
- * ----------------------------------------
- */
-@-webkit-keyframes bounce-in-top {
+@keyframes tracking-in-expand-fwd {
     0% {
-        -webkit-transform: translateY(-500px);
-        transform: translateY(-500px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
+        letter-spacing: -0.5em;
+        transform: translateZ(-700px);
         opacity: 0;
     }
 
-    38% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        opacity: 1;
-    }
-
-    55% {
-        -webkit-transform: translateY(-65px);
-        transform: translateY(-65px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    72% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    81% {
-        -webkit-transform: translateY(-28px);
-        transform: translateY(-28px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    90% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    95% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
+    40% {
+        opacity: 0.6;
     }
 
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
+        transform: translateZ(0);
+        opacity: 1;
     }
 }
 
-@keyframes bounce-in-top {
+@keyframes appear {
     0% {
-        -webkit-transform: translateY(-500px);
-        transform: translateY(-500px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
         opacity: 0;
     }
 
-    38% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        opacity: 1;
-    }
-
-    55% {
-        -webkit-transform: translateY(-65px);
-        transform: translateY(-65px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    72% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    81% {
-        -webkit-transform: translateY(-28px);
-        transform: translateY(-28px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    90% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    95% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
+        opacity: 1;
     }
 }

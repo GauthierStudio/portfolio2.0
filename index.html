@@ -14,22 +14,24 @@
 
 <body>
     <header>
-        <nav>
-            <h1 class="bounce-in-top"><a href="index.html">Gauthier Studios</a></h1>
-            <!-- Navigation menu, hidden by default -->
-            <a href="javascript:void(0);" id="remove-animation" class="icon load-blink" onclick="mobileMenu()"><i id="icon" class="fa-solid fa-gears"></i></a>
-            <div id="menu" class="bounce-in-top menu-items">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a><i class="fa-brands fa-github-alt"></i></a></li>
-                </ul>
+        <nav class="viewpoint">
+            <div class="inner-wrapper">
+                <h1 class="bounce-in-top"><a href="index.html">Gauthier Studios</a></h1>
+                <!-- Navigation menu, hidden by default -->
+                <a href="javascript:void(0);" id="remove-animation" class="icon load-blink" onclick="mobileMenu()"><i id="icon" class="fa-solid fa-gears"></i></a>
+                <div id="menu" class="bounce-in-top menu-items inner-wrapper">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <!-- hero -->
-    <section class="inner-wrapper hero">
+    <section class="inner-wrapper hero" id="hero-view">
         <h2>front end <br>development</h2>
         <p>Turn your website vision into reality.</p>
         <a href="#work">My Work</a>
