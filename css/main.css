@@ -26,7 +26,7 @@
 
 
     /* Wrapper */
-    --inner-wrapper: 90vw;
+    --inner-wrapper: 85vw;
 }
 
 body {
@@ -213,7 +213,7 @@ nav i:hover {
 /* Hero section */
 
 .hero {
-    height: 100vh;
+    height: 99vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
