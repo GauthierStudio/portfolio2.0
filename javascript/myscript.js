@@ -29,13 +29,16 @@ var viewpoint = document.getElementsByClassName('viewpoint')[0];
 // trigger this function every time the user scrolls
 window.onscroll = function (event) {
     var scroll = window.pageYOffset;
-    if (scroll < 300) {
-        // green
-        viewpoint.style.backgroundColor = 'none';
-    } else if (scroll >= 600 && scroll < 1200) {
+    if (scroll >= 700) {
         // blue
         viewpoint.style.backgroundColor = 'var(--text-red)';
     }
+    else {
+        // purple
+        viewpoint.style.backgroundColor = '';
+    }
+
+
 }
 
 
