@@ -10,11 +10,10 @@ function mobileMenu() {
         navbar.style.display = "none";
         icon.style.color = "#fff";
         animation.classList.add("load-blink");
+    }
+     // Open Menu
 
-
-        // Open Menu
-
-    } else {
+    else {
         navbar.style.display = "inline-block";
         icon.style.color = "#FF5E5B";
         animation.classList.remove("load-blink");
@@ -29,7 +28,7 @@ let viewpoint = document.getElementsByClassName('viewpoint')[0];
 // trigger this function every time the user scrolls
 window.onscroll = function (event) {
     var scroll = window.pageYOffset;
-    if (scroll >= 680) {
+    if (scroll >= 700) {
         // blue
         viewpoint.style.backgroundColor = 'var(--text-red)';
     }

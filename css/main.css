@@ -10,6 +10,7 @@
     --text-red: #36151E;
     /* accent */
     --accent: #FF5E5B;
+    --accent50: #ff5e5b50;
 
 
     /* font size*/
@@ -31,6 +32,7 @@
 
 body {
     font-size: 16px;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -86,12 +88,6 @@ body * {
     color: white;
 }
 
-html,
-body {
-    margin: 0px;
-    height: 100%;
-}
-
 
 li {
     list-style-type: none;
@@ -133,7 +129,7 @@ Mobile
 /* Selects each child of nav to add wrapper */
 
 nav {
-    padding: 0 ;
+    padding: 0;
     overflow: hidden;
     position: fixed;
     top: 10;
@@ -143,14 +139,14 @@ nav {
 
 nav h1 {
     float: left;
-    margin: .50em auto;
+    margin: 1em auto;
     color: var(--accent);
     font-size: calc(var(--h2-font-size) - 50%);
 }
 
 nav i {
     float: right;
-    margin: .50em auto;
+    margin: 1em auto;
     font-size: 2em;
     cursor: pointer;
 }
@@ -181,15 +177,14 @@ nav i:hover {
 .menu-items ul li {
     display: inline-block;
 }
+
 .menu-items ul li i {
     display: inline-block;
 }
+
 .menu-items li a {
     font-size: var(--h5-font-size);
 }
-
-
-
 
 
 .menu-items ul li a:hover {
@@ -210,36 +205,69 @@ nav i:hover {
 
 /* Nav above mobile */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 675px) {
     #menu {
         display: block;
+    }
+    nav {
+        margin-top: .20rem;
+    }
+
+    nav div {
+        display: flex;
+    }
+
+    nav div h1 {
+        margin: auto;
+        width: 100%;
+    }
+    nav div h1 a {
+        margin: 0;
     }
 
     .icon {
         display: none;
     }
+    .menu-items {
+        margin-top: 0;
+    }
+    .menu-items ul {
+        display: flex;
+        justify-content: end;
+    }
 
+    .menu-items ul li i {
+        margin: 0;
+    }
+    .menu-items ul li {
+        margin: 0 auto;
+        font-size: var(--h5-font-size);
+    }
+
+    #remove-animation {
+        display: none;
+    }
+
+    nav div h1 {
+        margin-right: 10vw;
+    }
 }
 
 
 /* Hero section */
 
 .hero {
-    height: 99vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
-    padding: 0 1em;
-    position: sticky;
 }
 
 .hero h2 {
     text-transform: capitalize;
-    font-size: calc(var(--h1-font-size) + 25%);
-    margin: 0;
     padding: 0;
 }
 
@@ -252,26 +280,103 @@ nav i:hover {
 .hero a {
     font-size: var(--h5-font-size);
     padding: 1em 2em;
-    border: 2px solid var(--accent);
+    border: 2px solid var(--text-red);
     border-radius: 5px;
-    color: var(--accent);
+    color: white;
 }
 
 .hero a:hover {
     background-color: var(--accent);
     color: white;
+    border: var(--accent);
     margin: 0;
 }
 
-.about {
-    padding: 2em 0;
+.about-container {
+    padding: 0 0 2em;
+    background-color: var(--text-red);
+
 }
 
 .about img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 2rem;
 }
+
+.about h2 {
+    font-size: calc(var(--h4-font-size) + 50%);
+    margin-top: .90em;
+    margin-bottom: .50em;
+}
+
+.about p:nth-child(1) {
+    margin-bottom: .70em;
+    font-size: calc(var(--h4-font-size) + 10%);
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+
+.about p:nth-child(3) {
+    color: var(--secondary-color);
+    font-size: calc(var(--p-font-size) + 7%);
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-shadow: 1px #423c3c;
+}
+
+@media screen and (min-width: 675px) {
+
+    .about-container {
+        padding: 0;
+        background-color: var(--text-red);
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .about div {
+        width: 70%;
+        padding: 0 2em;
+    }
+
+    .about img {
+        width: 60%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 0;
+    }
+
+    .about h2 {
+        font-size: calc(var(--h4-font-size) + 50%);
+        margin-top: .90em;
+        margin-bottom: .50em;
+    }
+
+    .about p:nth-child(1) {
+        margin-bottom: .70em;
+        font-size: calc(var(--h4-font-size) + 10%);
+        color: var(--secondary-color);
+        font-weight: 700;
+        letter-spacing: 6px;
+    }
+
+    .about p:nth-child(3) {
+        color: var(--secondary-color);
+        font-size: calc(var(--p-font-size) + 7%);
+        font-weight: 200;
+        letter-spacing: 1px;
+        text-shadow: 1px #423c3c;
+    }
+}
+
 
 
 
@@ -296,7 +401,7 @@ Animations
 }
 
 .load-blink {
-    animation: appear 1s .57s ease-in both;
+    animation: 1s .57s ease-in both;
 }
 
 
