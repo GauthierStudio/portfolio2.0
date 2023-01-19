@@ -12,8 +12,9 @@
     /* accent */
     --accent: #FF5E5B;
     --accent50: #ff5e5b50;
-
-
+    --lightgray: hsl(212, 45%, 89%);
+    --grayishblue: hsl(220, 15%, 55%);
+    --darkblue: hsl(218, 44%, 22%);
     /* font size*/
     --h1-font-size: 3.5rem;
     --h2-font-size: 2.5em;
@@ -212,6 +213,7 @@ nav i:hover {
     #menu {
         display: block;
     }
+
     nav {
         padding: .30rem 0;
     }
@@ -224,6 +226,7 @@ nav i:hover {
         margin: auto;
         width: 100%;
     }
+
     nav div h1 a {
         margin: 0;
     }
@@ -231,9 +234,11 @@ nav i:hover {
     .icon {
         display: none;
     }
+
     .menu-items {
         margin-top: 0;
     }
+
     .menu-items ul {
         display: flex;
         justify-content: end;
@@ -242,6 +247,7 @@ nav i:hover {
     .menu-items ul li i {
         margin: 0;
     }
+
     .menu-items ul li {
         margin: 0 auto;
         font-size: var(--h5-font-size);
@@ -390,68 +396,105 @@ nav i:hover {
 /* My Work */
 
 .work {
-    height: 100vh;
-    background-color: black;
+    height: auto;
+    margin: 0 auto;
+    padding:  1em 0;
+    /* background-color: white; */
+}
+
+.work * {
+    /* color: ; */
 }
 
 .work h2 {
+    color: black;
     font-size: calc(var(--h2-font-size) + 40%);
     margin: 0;
     padding: .5em 0;
     text-align: center;
 }
 
-.work-card {
-    position: relative;
-    background-image: url(/assets/qrcode.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 40vh;
+
+
+.cards-container {
+    height: 100vh;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 800px){
+    .cards-container {
+            flex-wrap: nowrap;
+        }
+}
+
+
+.cards-inner {
+    margin: 0 10px;
+}
+
+.cards-inner p {
+    display: none;
+}
+
+
+.card {
+    /* box-shadow: rgb(0, 0, 0) 0px 25px 20px -20px; */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    margin: 0 auto;
+}
+
+
+.card-content {
+    background-color: white;
+    border-radius: 15px;
+    border: var(--lightgray);
+    padding: 1em 1em 0 1em;
+    margin: 10vh 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 18px -6px rgba(0, 0, 0, 0.55);
 }
 
-.work-card * {
-    color: black;
+.card-content img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.work-card .date {
-    position: absolute;
-    bottom: 4px;
-    right: 1px;
-    font-size: var(--h6-font-size);
-    color: var(--secondary-color);
-    font-weight: 400;
-    letter-spacing: 6px;
-    align-self: flex-end;
-    justify-self: end;
-
-}
-
-
-
-.work-card ul{
-    position: absolute;
-    bottom: 4px;
-    left: 1px;
-    display: flex;
-}
-.work-card li {
+.card-content h2 {
+    font-weight: 700;
+    margin-top: 0px;
+    font-size: 1.25em;
     text-align: center;
-    border-right: 2px black solid;
-    margin: 0 5px;
-    padding: 0 7px;
-    list-style: none;
+
 }
 
-.work-card li:last-child {
-    border-right: none;
+.card-content p {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--grayishblue);
 }
 
-.work-card li: hover {
-    color:grey;
+.content {
+    padding: 1em;
 }
 
+.attribution {
+    margin-top: 1vh;
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        max-width: 20vw;
+    }
+
+}
 
 
 
