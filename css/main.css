@@ -390,10 +390,68 @@ nav i:hover {
 /* My Work */
 
 .work {
-    min-height: 100vh;
-    padding: 0 0 2em;
-    background-color: var(--text-red);
+    height: 100vh;
+    background-color: black;
 }
+
+.work h2 {
+    font-size: calc(var(--h2-font-size) + 40%);
+    margin: 0;
+    padding: .5em 0;
+    text-align: center;
+}
+
+.work-card {
+    position: relative;
+    background-image: url(/assets/qrcode.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card * {
+    color: black;
+}
+
+.work-card .date {
+    position: absolute;
+    bottom: 4px;
+    right: 1px;
+    font-size: var(--h6-font-size);
+    color: var(--secondary-color);
+    font-weight: 400;
+    letter-spacing: 6px;
+    align-self: flex-end;
+    justify-self: end;
+
+}
+
+
+
+.work-card ul{
+    position: absolute;
+    bottom: 4px;
+    left: 1px;
+    display: flex;
+}
+.work-card li {
+    text-align: center;
+    border-right: 2px black solid;
+    margin: 0 5px;
+    padding: 0 7px;
+    list-style: none;
+}
+
+.work-card li:last-child {
+    border-right: none;
+}
+
+.work-card li: hover {
+    color:grey;
+}
+
 
 
 
