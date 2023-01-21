@@ -9,14 +9,14 @@ function mobileMenu() {
     if (navbar.style.display === "inline-block") {
         navbar.style.display = "none";
         icon.style.color = "#fff";
-        animation.classList.add("load-blink");
+        // animation.classList.add("load-blink");
     }
      // Open Menu
 
     else {
         navbar.style.display = "inline-block";
         icon.style.color = "#FF5E5B";
-        animation.classList.remove("load-blink");
+        // animation.classList.remove("load-blink");
     }
 
 
@@ -24,6 +24,9 @@ function mobileMenu() {
 
 
 let viewpoint = document.getElementsByClassName('viewpoint')[0];
+let menuitems = document.getElementsByClassName('menu-items')[0];
+let icon = document.getElementById("icon");
+let delay = 1000;
 
 // trigger this function every time the user scrolls
 window.onscroll = function (event) {
@@ -31,6 +34,8 @@ window.onscroll = function (event) {
     if (scroll >= 710) {
         // blue
         viewpoint.style.backgroundColor = 'var(--text-red)';
+
+
     }
     else {
         // purple
