@@ -488,31 +488,52 @@
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
+    .card-content a:hover {
+        transition: 1s ease-in-out;
+        background-color: var(--accent);
+
+    }
+
     .card-content a:hover svg {
-        fill: var(--accent);
-        color: var(--accent);
-        transform: scale(.75);
+        fill: white;
+        color: white;
+        transform: scale(0.50);
+        transition: all 0.5s ease-in-out;
     }
 
     .card-content a:hover h2 {
-        fill: var(--accent);
-        color: var(--accent);
+        fill: white;
+        color: white;
         transform: scale(1.50);
+        transition: .5s ease-in-out;
     }
 
+    .card-content a:hover svg .photogo {
+        fill: white;
+        color: white;
+    }
+
+    .card-content a {
+        background-color: white;
+        transition: 600ms 100ms ease-in-out;
+    }
 
     .card-content svg,
     img {
         width: 50%;
         border-radius: 10px;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
     }
 
     .card-content h2 {
-        /* text-decoration: underline; */
         font-weight: 700;
         margin-top: 0px;
         font-size: 1.25em;
         text-align: center;
+        color: black;
+        transform: scale(1);
+        transition: .5s ease-in-out;
 
     }
 
