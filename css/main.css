@@ -496,10 +496,18 @@
 
     .card-content a:hover svg {
         fill: white;
-        color: white;
         transform: scale(0.50);
         transition: all 0.5s ease-in-out;
     }
+
+
+    .cards-inner:last-child .card-content a:hover svg path{
+        stroke: white;
+        fill: none;
+    }
+
+
+
 
     .card-content a:hover h2 {
         fill: white;
@@ -508,10 +516,10 @@
         transition: .5s ease-in-out;
     }
 
-    .card-content a:hover svg .photogo {
-        fill: white;
-        color: white;
-    }
+
+
+
+
 
     .card-content a {
         background-color: white;
