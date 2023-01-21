@@ -300,20 +300,28 @@ nav i:hover {
     color: white;
 }
 
-.hero img {
-    max-width: 25%;
+.hero svg {
+    max-width: 50%;
     margin-bottom: 10rem;
 }
 
-.hero img:hover {
-    background-color: var(--accent);
+
+#mouse {
+    fill: var(--accent);
+}
+
+.hero svg:hover .st0 {
+    fill: var(--secondary-color);
+}
+
+.hero svg:hover #mouse {
+    fill: var(--accent)
 }
 
 .about-container {
     height: fit-content;
     padding: 0 0 2em;
     background-color: rgb(0, 0, 0);
-
 }
 
 .about {
@@ -364,14 +372,13 @@ nav i:hover {
     }
 
 
-    .hero img {
-        max-width: 10%;
+    .hero svg {
+        max-width: 15%;
     }
 
-
-
-
-
+    #mouse {
+        fill: white;
+    }
 
 
 
