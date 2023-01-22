@@ -106,16 +106,6 @@
     }
 
 
-
-    /****************
-
-
-
-    Mobile
-
-
-    ******************/
-
     /* Utility Classes */
     .inner-wrapper {
         margin: 0 auto;
@@ -173,6 +163,7 @@
     .icon-hover {
         color: var(--accent);
     }
+
     .icon-hover:hover {
         color: white;
     }
@@ -191,6 +182,7 @@
 
     .menu-items ul li {
         display: inline-block;
+        padding-bottom: 1em;
     }
 
     .menu-items ul li i {
@@ -201,21 +193,18 @@
         font-size: var(--h5-font-size);
     }
 
-
-    .menu-items ul li:hover {
-        text-decoration: none;
-        margin-top: 10px;
-        padding-bottom: 14px;
-        border-bottom: 3px solid var(--accent);
-    }
-
     .menu-items ul li a i {
         color: var(--accent);
     }
 
+    .menu-items ul li a:hover {
+        color: var(--accent);
+        border-bottom: solid 1px var(--accent);
+    }
+
     #git:hover {
         color: white;
-        border-bottom: 0px solid black;
+        border-bottom: 2px solid black;
     }
 
 
@@ -314,11 +303,11 @@
     }
 
     .hero svg:hover .st0 {
-        fill: var(--secondary-color);
+        fill: var(--accent);
     }
 
     .hero svg:hover #mouse {
-        fill: var(--accent)
+        fill: white;
     }
 
     .about-container {
@@ -379,9 +368,9 @@
             max-width: 15%;
         }
 
-        #mouse {
+        /* #mouse {
             fill: white;
-        }
+        } */
 
 
 
@@ -494,6 +483,7 @@
     .card-content a:hover {
         transition: 1s ease-in-out;
         background-color: var(--accent);
+        border: 4px black solid;
 
     }
 
@@ -559,6 +549,66 @@
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************
+
+Sticky Contact Button
+
+
+*************************/
+    .contact-button {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        margin: 1em;
+        z-index: 100;
+        background-color: black;
+    }
+
+
+
+
+.contact-button a svg {
+        /* width: 25%; */
+        /* background-color: black; */
+    }
+
+    .contact-button svg {
+
+
+    }
+
+
+
+
+
+
     /***********************
 
     Animations
@@ -606,14 +656,15 @@
             opacity: 1;
         }
     }
-  @keyframes slide-out-top {
-      0% {
-          transform: translateY(0);
-          opacity: 1;
-      }
 
-      100% {
-          transform: translateY(-1000px);
-          opacity: 0;
-      }
-  }
+    @keyframes slide-out-top {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-1000px);
+            opacity: 0;
+        }
+    }
