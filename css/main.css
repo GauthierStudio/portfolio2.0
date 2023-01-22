@@ -582,29 +582,27 @@ Sticky Contact Button
 
 *************************/
     .contact-button {
+        display: flex;
         position: fixed;
         bottom: 0;
         right: 0;
-        width: 100%;
-        margin: 1em;
+        margin: 0 auto;
+        padding: 1em;
         z-index: 100;
-        background-color: black;
     }
 
-
-
-
-.contact-button a svg {
-        /* width: 25%; */
-        /* background-color: black; */
+    .contact-button a svg {
+        width: 3em;
+        height: 2em;
+        fill: #347EAE;
+        scale: 2.0;
+        margin-bottom: 1em;
     }
 
-    .contact-button svg {
-
-
+    .contact-button:hover a svg {
+        transform: scale(1.5);
+        fill: var(--accent);
     }
-
-
 
 
 
