@@ -40,3 +40,20 @@ window.onscroll = function (event) {
 
 
 
+function popupContact() {
+    let open = document.getElementById("contact-popup-button");
+    let form = document.getElementById("form");
+    let close = document.getElementById("close-button");
+    // Close menu
+    if (form.style.display === "flex") {
+        form.style.display = "none";
+        open.style.display = "flex";
+    }
+
+    // Open Menu
+    else {
+        form.style.display = "flex";
+        open.style.display ="none";
+
+    }
+}

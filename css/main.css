@@ -575,7 +575,7 @@
 
 
 
-/***********************
+    /***********************
 
 Sticky Contact Button
 
@@ -604,33 +604,58 @@ Sticky Contact Button
         fill: var(--accent);
     }
 
-    .contact-popup  {
-        position: fixed;
-        z-index: 10000;
-        text-decoration: none;
-        color: black;
-        text-align: center;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.4);
-        width: 100%;
-        justify-content: center;
-        height: 100vh;
-        padding: 50vh 0;
+    .contact-popup {
+        /* display: none; */
+        display: flex;
     }
-    .contact-popup .popup-button {
-        display: inline-block;
+
+
+    .contact-popup {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        flex-direction: column-reverse;
+        z-index: 10000;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+
+
+    .contact-popup div {
+        margin: auto;
+        background-color: white;
+        height: calc(5vh + 15rem);
+        width: calc(5vw + 15rem);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact-popup div a {
         padding: 1em;
-        margin: 1em;
         background-color: var(--secondary-color);
         border-radius: 10px;
         color: black;
         box-shadow: #423c3c;
         font-size: 1.8rem;
+        order: 2;
     }
 
-    .contact-popup a:hover {
+
+    .contact-popup div a:hover {
         background-color: var(--accent);
+    }
+
+    .contact-popup div i {
+        order: 1;
         color: black;
+        margin-left: 94%;
+        margin-top: 3%;
+    }
+
+    .contact-popup div i:hover {
+        color: var(--accent);
+        cursor: pointer;
     }
 
 
