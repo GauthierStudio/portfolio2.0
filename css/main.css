@@ -604,6 +604,37 @@ Sticky Contact Button
         fill: var(--accent);
     }
 
+    .contact-popup  {
+        position: fixed;
+        z-index: 10000;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 100%;
+        justify-content: center;
+        height: 100vh;
+        padding: 50vh 0;
+    }
+    .contact-popup .popup-button {
+        display: inline-block;
+        padding: 1em;
+        margin: 1em;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        color: black;
+        box-shadow: #423c3c;
+        font-size: 1.8rem;
+    }
+
+    .contact-popup a:hover {
+        background-color: var(--accent);
+        color: black;
+    }
+
+
+
 
     footer {
         text-align: center;
