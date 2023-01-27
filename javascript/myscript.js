@@ -43,17 +43,32 @@ window.onscroll = function (event) {
 function popupContact() {
     let open = document.getElementById("contact-popup-button");
     let form = document.getElementById("form");
-    let close = document.getElementById("close-button");
+
     // Close menu
     if (form.style.display === "flex") {
-        form.style.display = "none";
+        form.classList.add("slide-out-fwd-center");
+        open.classList.add("slide-in-fwd-br");
+        open.classList.remove("slide-out-bck-br");
         open.style.display = "flex";
+        setTimeout(function () {
+            form.style.display = "none";
+        }, 800);
+
+
+
     }
 
     // Open Menu
     else {
         form.style.display = "flex";
-        open.style.display ="none";
+        form.classList.remove("slide-out-fwd-center");
+        open.classList.add("slide-out-bck-br");
+        open.classList.remove("slide-in-fwd-br");
+        setTimeout(function () {
+            open.style.display = "none";
+        }, 80);
+
+
 
     }
 }

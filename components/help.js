@@ -5,7 +5,7 @@ class Help extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-     <section class="contact-button" onclick="popupContact()" id="contact-popup-button">
+     <section class="contact-button" onclick="popupContact()" id="contact-popup-button" title="Contact">
         <svg width="100px" height="100px">
             <g fill-rule="evenodd">
             <circle cx="16" cy="16" r="16"/>
@@ -13,8 +13,10 @@ class Help extends HTMLElement {
     </section>
     <section class="contact-popup" id="form">
         <div>
-            <a href="https://gauthierstudios.hbportal.co/schedule/63cb52d125d48a1cc47c9484" target="_blank"><span title="Book A Chat"><span>Book At Chat</a>
             <i title="Close Menu" onclick="popupContact()" id="close-button" class="fa-regular fa-circle-xmark"></i>
+            <h2>Need Help?</h2>
+            <a href="#" target="_blank"><span title="Send An Email"><span>Send An Email</a>
+            <a href="https://gauthierstudios.hbportal.co/schedule/63cb52d125d48a1cc47c9484" target="_blank"><span title="Book A Chat"><span>Book A Call</a>
         </div>
     </section>
     `;
