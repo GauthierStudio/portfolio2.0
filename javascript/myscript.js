@@ -4,6 +4,7 @@ let icon = document.getElementById("icon")[0];
 let menuNav = document.getElementsByClassName('menu-nav')[0];
 let menuitems = document.getElementsByClassName('menu-items')[0];
 let navitem = document.getElementsByClassName('nav-item')[0];
+let helpIcon = document.getElementsByClassName('fa-comment-dots')[0];
 
 
 function mobileMenu() {
@@ -29,8 +30,10 @@ function mobileMenu() {
 
 window.onscroll = function (event) {
     var scroll = window.pageYOffset;
-    if (scroll >= 710) {
+    if (scroll >= 100) {
         menuNav.style.backgroundColor = 'var(--text-red)';
+        // helpIcon.style.color = 'blue';
+
     }
     else {
         menuNav.style.backgroundColor = '';
@@ -72,3 +75,12 @@ function popupContact() {
 
     }
 }
+
+(function (h, o, t, j, a, r) {
+    h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+    h._hjSettings = { hjid: 3340144, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
