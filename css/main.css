@@ -435,6 +435,7 @@
 
 
         .card {
+            cursor: pointer;
             max-width: 84%;
             display: flex;
             flex-direction: column;
@@ -456,11 +457,13 @@
 
         .hidden-content {
             display: flex;
-            /* display: none; */
             flex-direction: column;
             justify-content: center;
         }
 
+        .webhide, .photohide, .imagehide {
+            display: none;
+        }
 
 
         .hidden-content ul {
@@ -518,7 +521,7 @@
         .card:hover h2 {
             color: white;
             transition: all 0.5s ease;
-            scale: 1.2;
+            /* scale: 1; */
         }
 
         .card:hover a {

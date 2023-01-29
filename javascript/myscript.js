@@ -7,6 +7,7 @@ let navitem = document.getElementsByClassName('nav-item')[0];
 let helpIcon = document.getElementsByClassName('fa-comment-dots')[0];
 
 
+// Hides or displays menu on click
 function mobileMenu() {
     let navbar = document.getElementById("menu");
     let icon = document.getElementById("icon");
@@ -27,6 +28,7 @@ function mobileMenu() {
     }
 }
 
+// Adds abackground to menu upon scroll
 
 window.onscroll = function (event) {
     var scroll = window.pageYOffset;
@@ -40,6 +42,66 @@ window.onscroll = function (event) {
     }
 }
 
+
+
+
+// Cards
+
+// Hides or shows content on click
+
+
+
+
+function hideWeb() {
+    let webHide = document.getElementsByClassName("webhide")[0];
+
+    if (webHide.style.display === "flex") {
+        webHide.style.display = "none";
+        console.log("pressed");
+    }
+
+    else {
+        webHide.style.display = "flex";
+    }
+}
+
+function hidePhoto() {
+    let photoHide = document.getElementsByClassName("photohide")[0];
+
+    if (photoHide.style.display === "flex") {
+        photoHide.style.display = "none";
+    }
+
+    else {
+        photoHide.style.display = "flex";
+    }
+}
+
+function hideImage() {
+    let imageHide = document.getElementsByClassName("imagehide")[0];
+
+    if (imageHide.style.display === "flex") {
+        imageHide.style.display = "none";
+    }
+
+    else {
+        imageHide.style.display = "flex";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Popup contact form
 
 
 
