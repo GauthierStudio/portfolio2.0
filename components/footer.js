@@ -7,6 +7,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `
     <footer>
         <p>&copy; 2022 Jesse Gauthier Studios | All Rights Reserved</p>
+        <p>Ottawa - Ontario </p>
     </footer>
     `;
     }

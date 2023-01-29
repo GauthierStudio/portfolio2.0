@@ -17,7 +17,7 @@ class Header extends HTMLElement {
                         <li><a class="nav-item" href="#about">About</a></li>
                         <li><a class="nav-item" href="#work">Work</a></li>
                         <li><a class="nav-item" onclick="popupContact()" href="#contact">Contact</a></li>
-                        <li><a class="nav-item" href="https://github.com/GauthierStudio"><i id="git" class="fa-brands fa-github-alt"></i></a></li>
+                        <li><a class="nav-item" href="https://www.instagram.com/gauthierstudios"><i id="git" class="fa-brands fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
