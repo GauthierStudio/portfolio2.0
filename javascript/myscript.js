@@ -51,29 +51,43 @@ window.onscroll = function (event) {
 
 
 
-
+// Web Development Card
 function hideWeb() {
     let webHide = document.getElementsByClassName("webhide")[0];
 
     if (webHide.style.display === "flex") {
-        webHide.style.display = "none";
-        console.log("pressed");
+        webHide.style.animation = "slide-out-blurred-top 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both";
+        setTimeout(function () {
+            webHide.style.display = "none";
+        }, 450);
+        console.log("Web Closed");
     }
 
     else {
         webHide.style.display = "flex";
+        webHide.style.animation = "slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both";
+        console.log("Web Opened");
     }
 }
+
+
+
 
 function hidePhoto() {
     let photoHide = document.getElementsByClassName("photohide")[0];
 
     if (photoHide.style.display === "flex") {
-        photoHide.style.display = "none";
-    }
+        photoHide.style.animation = "slide-out-blurred-top 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both";
+        setTimeout(function () {
+            photoHide.style.display = "none";
+        }, 450);
+        console.log("Photo Closed");
 
+    }
     else {
         photoHide.style.display = "flex";
+        photoHide.style.animation = "slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both";
+        console.log("Web Opened");
     }
 }
 
@@ -81,11 +95,17 @@ function hideImage() {
     let imageHide = document.getElementsByClassName("imagehide")[0];
 
     if (imageHide.style.display === "flex") {
-        imageHide.style.display = "none";
+        imageHide.style.animation = "slide-out-blurred-top 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both";
+        setTimeout(function () {
+            imageHide.style.display = "none";
+        }, 450);
+        console.log("image closed");
     }
 
     else {
         imageHide.style.display = "flex";
+        imageHide.style.animation = "slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both";
+        console.log("image Opened");
     }
 }
 
