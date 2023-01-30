@@ -124,24 +124,22 @@
         }
 
         nav {
-            padding: 0;
-            overflow: hidden;
+            padding: 1em 0;
             position: fixed;
-            top: 10;
             width: 100%;
             z-index: 100;
-
         }
 
         nav h1 {
-            margin: 0 auto;
+            display: inline-block;
             color: var(--accent);
             font-size: calc(var(--h2-font-size) - 50%);
+            max-width: 65%;
         }
 
         nav i {
+            display: inline;
             float: right;
-            margin: 1em auto;
             font-size: 2em;
             cursor: pointer;
         }
@@ -170,7 +168,7 @@
         }
 
         .menu-items {
-            margin-top: 0em;
+            margin-top: 0;
             width: 100%;
         }
 
@@ -449,6 +447,18 @@
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
 
+        .card:nth-child(1) {
+            flex-shrink: -1;
+        }
+
+        .card:nth-child(2) {
+            flex-grow: 1;
+        }
+
+        .card:nth-child(3) {
+            flex-shrink: -1;
+        }
+
         .card svg {
             max-width: 40%;
             margin: 0 auto;
@@ -466,6 +476,7 @@
         .imagehide {
             display: none;
         }
+
 
 
 
@@ -499,6 +510,7 @@
             .cards-container {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: space-evenly;
                 max-width: 90vw;
                 margin: 0 auto
@@ -509,6 +521,31 @@
                 margin: 1em;
             }
         }
+
+        @media screen and (min-width: 1200px) {
+            .cards-container {
+                flex-wrap: nowrap;
+            }
+
+
+            .card:nth-child(1) {
+                flex-grow: 1;
+                order: 2;
+            }
+
+            .card:nth-child(2) {
+                flex-grow: 0;
+                order: 1;
+            }
+
+            .card:nth-child(3) {
+                flex-grow: 0;
+                order: 3;
+            }
+        }
+
+
+
 
 
         .card:hover {
