@@ -506,7 +506,7 @@
             background-color: black;
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 800px) {
             .cards-container {
                 display: flex;
                 flex-direction: row;
@@ -527,19 +527,23 @@
                 flex-wrap: nowrap;
             }
 
+            .card:nth-child(2) {
+                order: 1;
+                flex-shrink: 2;
+                flex-grow: 1;
+            }
 
             .card:nth-child(1) {
-                flex-grow: 1;
+                flex-grow: 3;
+                flex-shrink: 0;
                 order: 2;
             }
 
-            .card:nth-child(2) {
-                flex-grow: 0;
-                order: 1;
-            }
+
 
             .card:nth-child(3) {
-                flex-grow: 0;
+                flex-grow: 1;
+                flex-shrink: 2;
                 order: 3;
             }
         }
