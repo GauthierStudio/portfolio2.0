@@ -1,0 +1,106 @@
+.inner-wrapper {
+    max-width: 85vw;
+    margin: 0 auto;
+}
+
+/* My Work */
+
+.work {
+    height: 100vh;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card * {
+    margin: 1.20rem 0;
+}
+
+.card svg {
+    align-items: center;
+    margin: 1.20rem auto;
+    order: 1;
+    width: 100%;
+}
+
+.card h2 {
+    text-align: center;
+    order: 2;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF5E5B;
+    text-transform: uppercase;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .50em;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    background-color: #1f3251;
+    order: 3;
+    text-align: center;
+}
+
+.card a:hover {
+    background-color: #FF5E5B;
+    box-shadow: -7px 10px 49px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.card p {
+    order: 3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+
+/* Selects all svgs
+.card-background {
+    margin: 0 .50em;
+    padding: 1em;
+    width: 50%;
+} */
+
+.skillcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skillcard {
+    display: none;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    z-index: 100;
+}
+
+
+
+
+}
+
+#codesvg {
+    margin-top: ;
+}
+
+#javasvg {}
+
+#htmlsvg {}
+
+#csssvg {}
